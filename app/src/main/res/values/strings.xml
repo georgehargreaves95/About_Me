@@ -1,0 +1,11 @@
+<resources>
+  <string name="app_name">About Me</string>
+  <string name="main_activity_george_hargreaves">George Hargreaves</string>
+  <string name="star_image_content_description">Image of a star</string>
+  <string name="content_description_image_for_the_bio">Image for the bio</string>
+  <string name="what_is_your_nick_name">What is your nick name?</string>
+  <string name="bio_done">Done</string>
+  <string name="bio_set_image">Set Image</string>
+  <string name="image_capture_data_error">An error occurred retrieving data from the camera</string>
+  <string name="image_capture_cancelled">Capture cancelled</string>
+</resources>

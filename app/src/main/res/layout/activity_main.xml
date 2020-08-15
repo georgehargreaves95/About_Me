@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+    <variable
+      name="myName"
+      type="com.georgehargreaves.aboutme.MyName" />
+  </data>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+      android:id="@+id/bio_user_name"
+      style="@style/about_me_name_text"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@{myName.myName}" />
+
+    <EditText
+      android:id="@+id/bio_user_nickname"
+      style="@style/about_me_name_text"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/what_is_your_nick_name"
+      android:inputType="textPersonName|textMultiLine" />
+
+    <Button
+      android:id="@+id/bio_done_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_margin="@dimen/large_margin"
+      android:text="@string/bio_done" />
+
+    <TextView
+      android:id="@+id/bio_nick_name_display"
+      style="@style/about_me_name_text"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@{myName.nickName}"
+      android:visibility="gone" />
+
+    <ImageView
+      android:id="@+id/star_image"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:contentDescription="@string/star_image_content_description"
+      app:srcCompat="@android:drawable/star_big_on" />
+
+    <Button
+      android:id="@+id/bio_set_image_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      android:text="@string/bio_set_image" />
+
+    <ScrollView
+      android:id="@+id/bio_scroll"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <LinearLayout
+        android:id="@+id/bio_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+          android:id="@+id/bio_image"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:contentDescription="@string/content_description_image_for_the_bio" />
+
+        <TextView
+          android:id="@+id/bio_text"
+          style="@style/about_me_name_text"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/app_name" />
+
+      </LinearLayout>
+    </ScrollView>
+
+  </LinearLayout>
+</layout>
